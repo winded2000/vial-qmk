@@ -1,0 +1,21 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+
+#pragma once
+// From CSTC40 default
+#define VIAL_KEYBOARD_UID {0x8A, 0x52, 0x5A, 0xBE, 0x1D, 0x82, 0x69, 0x72}
+#define VIAL_UNLOCK_COMBO_ROWS { 1, 2 }
+#define VIAL_UNLOCK_COMBO_COLS { 0, 11 }
+#define DYNAMIC_KEYMAP_LAYER_COUNT 6  //ORIGINALLY 10
+#define VIAL_TAP_DANCE_ENTRIES 32
+#define VIAL_COMBO_ENTRIES 32
+#define VIALRGB_NO_DIRECT
+// Personal settings
+#define ONESHOT_TAP_TOGGLE 3
+#define ONESHOT_TIMEOUT 5000
+#define TAPPING_TERM 195
+#define TAPPING_TERM_PER_KEY
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_FORCE_HOLD
+#define PERMISSIVE_HOLD
+#define COMBO_COUNT 6
+#define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
