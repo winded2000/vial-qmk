@@ -1,0 +1,11 @@
+    NKRO_ENABLE           = yes # Enable N-Key Rollover
+    AUTOCORRECT_ENABLE    = yes
+    CAPS_WORD_ENABLE      = yes
+    TAP_DANCE_ENABLE      = no
+    TRI_LAYER_ENABLE      = no
+    AUTO_SHIFT_ENABLE     = yes
+    COMBO_ENABLE          = yes
+    VIA_ENABLE            = yes
+    VIAL_ENABLE           = yes
+    VIALRGB_ENABLE        = yes
+SRC += features/sentence_case.c

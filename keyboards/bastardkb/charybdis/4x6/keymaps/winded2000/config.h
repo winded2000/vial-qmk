@@ -16,13 +16,31 @@
  */
 #pragma once
 
+#define ONESHOT_TAP_TOGGLE 3
+#define ONESHOT_TIMEOUT 5000
+#define TAPPING_TERM 185
+#define TAPPING_TERM_PER_KEY
+#define IGNORE_MOD_TAP_INTERRUPT
+#define TAPPING_FORCE_HOLD
+#define PERMISSIVE_HOLD
+#define COMBO_COUNT 6
+#define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
+
 #ifdef VIA_ENABLE
 /* VIA configuration. */
 #    define DYNAMIC_KEYMAP_LAYER_COUNT 4
-#endif // VIA_ENABLE
 
-/* Disable unused features. */
-#define NO_ACTION_ONESHOT
+#    ifdef VIAL_ENABLE
+/** Vial-specific configuration. */
+
+#        define VIAL_KEYBOARD_UID \
+            { 0x6D, 0xA5, 0xCD, 0x8D, 0xC7, 0x3D, 0x7B, 0xA8 }
+#        define VIAL_UNLOCK_COMBO_ROWS \
+            { 0, 5 }
+#        define VIAL_UNLOCK_COMBO_COLS \
+            { 0, 0 }
+#    endif // VIAL_ENABLE
+#endif     // VIA_ENABLE
 
 /* Charybdis-specific features. */
 
@@ -30,5 +48,5 @@
 // Automatically enable the pointer layer when moving the trackball.  See also:
 // - `CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_TIMEOUT_MS`
 // - `CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_THRESHOLD`
-// #define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
+ #define CHARYBDIS_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 #endif // POINTING_DEVICE_ENABLE
